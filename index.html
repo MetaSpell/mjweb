@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Majify Technologies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 700px;
+      margin: 5% auto;
+      padding: 1em;
+      color: #222;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #0066cc;
+    }
+    .lang {
+      display: none;
+    }
+    .visible {
+      display: block;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .note {
+      font-size: 0.9em;
+      color: #888;
+      margin-top: 2em;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <h1>Majify Technologies</h1>
+
+  <!-- Version FR -->
+  <div id="fr" class="lang">
+    <p>Majify Technologies est une entreprise enregistrée au Québec.</p>
+    <ul>
+      <li><strong>NEQ :</strong> En attente</li>
+      <li><strong>Email :</strong> <a href="mailto:info@majify.tech">info@majify.tech</a></li>
+    </ul>
+    <p>
+      Nous développons des solutions logicielles natives pour Windows,
+      notamment <a href="https://wake.tools" target="_blank">Wake JIT Engine</a>,
+      un moteur d’exécution en C99, modulaire et en temps réel.
+    </p>
+  </div>
+
+  <!-- Version EN -->
+  <div id="en" class="lang">
+    <p>Majify Technologies is a registered company based in Québec, Canada.</p>
+    <ul>
+      <li><strong>NEQ:</strong> Pending</li>
+      <li><strong>Email:</strong> <a href="mailto:info@majify.tech">info@majify.tech</a></li>
+    </ul>
+    <p>
+      We develop native software solutions for Windows, including
+      <a href="https://wake.tools" target="_blank">Wake JIT Engine</a>,
+      a modular, real-time execution engine written in C99.
+    </p>
+  </div>
+
+  <p class="note">Language auto-detected: <span id="langDisplay"></span></p>
+  <p class="note" id="typewriter"></p>
+
+  <script>
+    const userLang = (navigator.language || navigator.userLanguage || "").toLowerCase();
+    const langCode = userLang.split('-')[0];
+    document.getElementById("langDisplay").textContent = langCode;
+
+    if (langCode === "fr") {
+      document.getElementById("fr").classList.add("visible");
+    } else {
+      document.getElementById("en").classList.add("visible");
+    }
+
+    const steps = [
+      { type: "text", text: "— Majify your day — ", delay: 3000 },
+      { type: "text", text: "One idea at a time — ", delay: 1000 },
+      { type: "text", text: "It’s ", delay: 1000 },
+      { type: "link", text: "Wake Time", href: "https://discord.gg/dKxkvDK37e", delay:  700 },
+      { type: "text", text: " —", delay: 800 },
+    ];
+
+    const target = document.getElementById("typewriter");
+    let stepIndex = 0;
+
+    function runStep() {
+      if (stepIndex >= steps.length) return;
+      const step = steps[stepIndex++];
+      setTimeout(() => {
+        if (step.type === "text") {
+          let i = 0;
+          const interval = setInterval(() => {
+            if (i < step.text.length) {
+              target.append(document.createTextNode(step.text[i++]));
+            } else {
+              clearInterval(interval);
+              runStep();
+            }
+          }, 40);
+        } else if (step.type === "link") {
+          const link = document.createElement("a");
+          link.href = step.href;
+          link.target = "_blank";
+          link.textContent = step.text;
+          target.appendChild(link);
+          runStep();
+        }
+      }, step.delay);
+    }
+
+    runStep();
+  </script>
+</body>
+</html>
