@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Majify Technologies — Polices libres (Open Sans, Source Sans 3, Mulish, Barlow)</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Sans+3:wght@400;700&family=Mulish:wght@400;700&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --majify-blue:#2962FF;
+      --tech-gray:#555;
+      --bg:#0b0f16;
+      --fg:#e7e7e7;
+    }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:system-ui,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif}
+    .wrap{max-width:960px;margin:6vh auto;padding:24px 20px;display:grid;gap:28px}
+
+    /* Gabarit commun */
+    .logo{
+      line-height:1.05;
+      user-select:none;
+    }
+    .logo .maj{
+      display:block;
+      font-weight:700;
+      font-size:clamp(28px,6.2vw,64px);
+      letter-spacing:-0.01em;
+      color:var(--majify-blue);
+    }
+    .logo .tech{
+      display:block;
+      font-weight:400;
+      font-size:clamp(16px,3.2vw,30px);
+      color:var(--tech-gray);
+      letter-spacing:0.06em;
+      margin-top:-0.18em;
+    }
+
+    /* Variantes de police */
+    .open-sans   { font-family: 'Open Sans', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Arial, sans-serif; }
+    .source-sans { font-family: 'Source Sans 3', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Arial, sans-serif; }
+    .mulish      { font-family: 'Mulish', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Arial, sans-serif; }
+    .barlow      { font-family: 'Barlow', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Arial, sans-serif; }
+
+    /* Bandeau titre */
+    .title{opacity:.9;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:#b9c3ff}
+
+    /* Cartes de preview */
+    .card{
+      border:1px solid #1b2230;border-radius:10px;background:#0e1420;padding:18px 16px;
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.02) inset;
+    }
+    .label{font:600 12px/1 system-ui,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;opacity:.8;margin-bottom:10px;color:#9fb1ff}
+    .note{font:500 12px/1.4 system-ui,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;color:#9aa3b2;margin-top:10px}
+    a{color:#8fb6ff;text-decoration:none}
+    a:hover{text-decoration:underline}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="title">Polices libres – démos rapides (Open Sans, Source Sans 3, Mulish, Barlow)</div>
+
+    <!-- Open Sans -->
+    <section class="card">
+      <div class="label">Open Sans</div>
+      <div class="logo open-sans" aria-label="Majify Technologies en Open Sans">
+        <span class="maj">Majify</span>
+        <span class="tech">Technologies</span>
+      </div>
+      <div class="note">
+        Intégration : <code>font-family: 'Open Sans', sans-serif;</code>
+      </div>
+    </section>
+
+    <!-- Source Sans 3 -->
+    <section class="card">
+      <div class="label">Source Sans 3</div>
+      <div class="logo source-sans" aria-label="Majify Technologies en Source Sans 3">
+        <span class="maj">Majify</span>
+        <span class="tech">Technologies</span>
+      </div>
+      <div class="note">
+        Intégration : <code>font-family: 'Source Sans 3', sans-serif;</code>
+      </div>
+    </section>
+
+    <!-- Mulish -->
+    <section class="card">
+      <div class="label">Mulish</div>
+      <div class="logo mulish" aria-label="Majify Technologies en Mulish">
+        <span class="maj">Majify</span>
+        <span class="tech">Technologies</span>
+      </div>
+      <div class="note">
+        Intégration : <code>font-family: 'Mulish', sans-serif;</code>
+      </div>
+    </section>
+
+    <!-- Barlow -->
+    <section class="card">
+      <div class="label">Barlow</div>
+      <div class="logo barlow" aria-label="Majify Technologies en Barlow">
+        <span class="maj">Majify</span>
+        <span class="tech">Technologies</span>
+      </div>
+      <div class="note">
+        Intégration : <code>font-family: 'Barlow', sans-serif;</code>
+      </div>
+    </section>
+
+    <div class="note">
+      Astuce : tu peux garder toutes les <code>&lt;link&gt;</code> et ne changer que la classe <code>.open-sans</code>, <code>.source-sans</code>, <code>.mulish</code> ou <code>.barlow</code> sur ton bloc logo pour comparer rapidement.  
+      Si tu veux l’une **comme police par défaut du site**, applique la classe choisie au <code>body</code>.
+    </div>
+  </main>
+</body>
+</html>
