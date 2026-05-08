@@ -4,154 +4,450 @@
   <meta charset="UTF-8">
   <title>Majify Technologies</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script defer src="version.js"></script>
-  
+  <meta name="description" content="Majify Technologies Inc. develops native Windows software, modular tools, and runtime technology powered by Wake.">
 
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap" rel="stylesheet">
-
-
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
-  .brand {
-  
-     font-weight: 700;
-     font-size: 1.6em;
-     color: #1166E0; /* Majify Blue */
-     line-height: 1.2;
-     font-family: 'Barlow', sans-serif;
-   }
+    :root {
+      --blue: #1166E0;
+      --text: #222;
+      --muted: #666;
+      --soft: #f5f7fb;
+      --border: #dde3ee;
+      --footer: #8a8a8a;
+    }
 
-   .tech {
-     display: block;
-     font-weight: 400;
-     font-size: 0.83em;
-     color: #555;
-     letter-spacing: 1px;
-     margin-top: -0.7em; 
-     font-family: 'Barlow', sans-serif;
-   }
+    * {
+      box-sizing: border-box;
+    }
 
-  
-  
     body {
-      font-family: sans-serif;
-      max-width: 700px;
-      margin: 5% auto;
-      padding: 1em;
-      color: #222;
+      font-family: 'Barlow', sans-serif;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 22px;
+      color: var(--text);
       line-height: 1.6;
+      background: #fff;
     }
-    h1 {
-      color: #0066cc;
+
+    header {
+      margin-bottom: 42px;
     }
-    .lang {
-      display: none;
+
+    .brand-wrap {
+      margin: 0;
+      line-height: 1.05;
     }
-    .visible {
+
+    .brand {
       display: block;
+      font-weight: 700;
+      font-size: 2.2rem;
+      color: var(--blue);
     }
+
+    .tech {
+      display: block;
+      font-weight: 400;
+      font-size: 1.05rem;
+      color: #555;
+      letter-spacing: 1px;
+      margin-top: -4px;
+    }
+
+    .tagline {
+      margin-top: 24px;
+      font-size: 1.35rem;
+      font-weight: 600;
+      max-width: 720px;
+    }
+
+    .subtagline {
+      color: var(--muted);
+      max-width: 720px;
+      font-size: 1.05rem;
+    }
+
+    section {
+      margin: 34px 0;
+    }
+
+    h2 {
+      color: var(--blue);
+      font-size: 1.25rem;
+      margin: 0 0 12px 0;
+    }
+
+    p {
+      margin: 0 0 14px 0;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
     a {
-      color: #0066cc;
+      color: var(--blue);
       text-decoration: none;
+      font-weight: 600;
     }
+
     a:hover {
       text-decoration: underline;
     }
-    .note {
-      font-size: 0.9em;
-      color: #888;
-      margin-top: 2em;
-      white-space: pre-wrap;
+
+    .card {
+      background: var(--soft);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      margin-top: 14px;
     }
-    
 
+    .project {
+      margin-bottom: 18px;
+    }
 
+    .project:last-child {
+      margin-bottom: 0;
+    }
 
+    .project-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 4px;
+    }
+
+    .status {
+      display: inline-block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: #e9f1ff;
+      color: var(--blue);
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+
+    ul {
+      padding-left: 22px;
+      margin: 0;
+    }
+
+    li {
+      margin: 4px 0;
+    }
+
+    .typewriter {
+	  color: #777;
+	  font-size: 0.90rem;
+	  margin-top: 42px;
+	  margin-bottom: 18px;
+	  text-align: left;
+	  opacity: 0.82;
+	  white-space: pre-wrap;
+	  user-select: none;
+	  letter-spacing: 0.15px;
+	  font-style: italic;
+	}
+
+	.typewriter a {
+	  color: #666;
+	  font-weight: 500;
+	  text-decoration: none;
+	  transition: color 0.18s ease;
+	}
+
+	.typewriter a:hover {
+	  color: var(--blue);
+	  text-decoration: none;
+	}
+
+    footer {
+      margin-top: 10px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+      color: var(--footer);
+      font-size: 0.95rem;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--footer);
+      font-weight: 500;
+      margin-left: 16px;
+    }
+
+    .footer-links a:first-child {
+      margin-left: 0;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 34px 18px;
+      }
+
+      .brand {
+        font-size: 1.9rem;
+      }
+
+      .tagline {
+        font-size: 1.18rem;
+      }
+
+      .footer-row {
+        display: block;
+      }
+
+      .footer-links {
+        margin-top: 8px;
+      }
+
+      .footer-links a {
+        margin-left: 0;
+        margin-right: 14px;
+      }
+
+      .typewriter {
+        text-align: left;
+        font-size: 0.96rem;
+      }
+    }
   </style>
 </head>
 <body>
-   <h1><span class="brand">Majify</span> <span class="tech">Technologies</span></h1>
 
+  <header>
+    <h1 class="brand-wrap">
+      <span class="brand">Majify</span>
+      <span class="tech">Technologies</span>
+    </h1>
 
-  <!-- Version FR -->
-  <div id="fr" class="lang">
-    <p>Majify Technologies est une entreprise enregistrée au Québec.</p>
-    <ul>
-      <li><strong>NEQ : </strong>1181108862</li>
-      <li><strong>Email :</strong> <a href="mailto:info@majify.tech">info@majify.tech</a></li>
-    </ul>
-    <p>
-      Nous développons des solutions logicielles natives pour Windows,
-      notamment <a href="https://wake.tools" target="_blank">Wake JIT Engine</a>,
-      un moteur d’exécution en C99, modulaire et en temps réel.
+    <p class="tagline">
+      Native Windows software, modular tools, and creative runtime technology.
     </p>
-  </div>
 
-  <!-- Version EN -->
-  <div id="en" class="lang">
-    <p>Majify Technologies is a registered company based in Québec, Canada.</p>
-    <ul>
-      <li><strong>NEQ:</strong>1181108862</li>
-      <li><strong>Email:</strong> <a href="mailto:info@majify.tech">info@majify.tech</a></li>
-    </ul>
-    <p>
-      We develop native software solutions for Windows, including
-      <a href="https://wake.tools" target="_blank">Wake JIT Engine</a>,
-      a modular, real-time execution engine written in C99.
+    <p class="subtagline">
+      Majify Technologies Inc. is a Québec-based software company developing lightweight,
+      high-performance desktop applications powered by our in-house technology.
     </p>
-  </div>
+  </header>
 
-  <p class="note">Language auto-detected: <span id="langDisplay"></span></p>
-  <p class="note" id="typewriter"></p>
+  <section>
+    <h2>Company</h2>
+
+    <div class="card">
+      <p>
+        <strong>Majify Technologies Inc.</strong> is a registered company based in Québec, Canada.
+      </p>
+
+      <ul>
+        <li><strong>NEQ:</strong> 1181108862</li>
+        <li><strong>Email:</strong> <a href="mailto:info@majify.tech">info@majify.tech</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Technology</h2>
+
+    <div class="card">
+      <p>
+        Our core technology is <strong>Wake</strong>, a modular real-time runtime engine written in C99.
+        Wake is currently functional in early version <strong>v0.1</strong> and is used as the foundation
+        for our upcoming software ecosystem.
+      </p>
+
+      <p>
+        <a href="https://wake.tools" target="_blank" rel="noopener">
+          Visit wake.tools
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Current and Upcoming Projects</h2>
+
+    <div class="card">
+
+      <div class="project">
+        <div class="project-title">
+          <a href="https://wake.tools" target="_blank" rel="noopener">
+            Wake Runtime
+          </a>
+          <span class="status">Functional v0.1</span>
+        </div>
+
+        <p>
+          The core runtime technology behind Majify applications. Wake enables modular execution,
+          fast iteration, and a plug-and-play software architecture.
+        </p>
+      </div>
+
+      <div class="project">
+        <div class="project-title">
+          Vellix
+          <span class="status">In development</span>
+        </div>
+
+        <p>
+          A future modular desktop platform where users will be able to install optional tools,
+          extensions, and creative modules.
+        </p>
+      </div>
+
+      <div class="project">
+        <div class="project-title">
+          DeiTouch
+          <span class="status">Prototype</span>
+        </div>
+
+        <p>
+          An experimental touch-based interface project exploring new ways to interact with
+          virtual keyboards and desktop software.
+        </p>
+      </div>
+
+    </div>
+  </section>
+	<!--
+  <section>
+    <h2>Prototype Demonstration</h2>
+
+    <div class="card">
+      <p>
+        One of our public prototype demonstrations is DeiTouch, shown through the GlassTyping project.
+      </p>
+
+      <p>
+        <a href="https://www.youtube.com/watch?v=2ECTJaV08eM" target="_blank" rel="noopener">
+          Watch the DeiTouch prototype video
+        </a>
+      </p>
+
+      <p>
+        The video demonstrates one of our prototype applications running on the Wake runtime.
+      </p>
+    </div>
+  </section>
+  -->
+
+  <section>
+    <h2>Vision</h2>
+
+    <div class="card">
+      <p>
+        Majify is building a modular desktop software ecosystem focused on
+        native performance, experimentation, and creative workflows.
+      </p>
+
+      <p>
+        Future applications and tools may include optional modules,
+        extensions, and downloadable components built on top of the Wake runtime.
+      </p>
+
+      <p>
+        Commercial availability and licensing details will be announced
+        progressively as products mature.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Status</h2>
+
+    <div class="card">
+      <p>
+        Majify products are currently in early development and prototype stage,
+        except for Wake, which is already functional as an early runtime technology.
+      </p>
+
+      <p>
+        Public demonstrations and previews are progressively being released
+        while the platform infrastructure continues to evolve.
+      </p>
+    </div>
+  </section>
+
+  <p class="typewriter" id="typewriter"></p>
+
+  <footer>
+    <div class="footer-row">
+      <div>
+        © <span id="year"></span> Majify Technologies Inc.
+      </div>
+
+      <div class="footer-links">
+        <a href="/terms.html">Terms &amp; Conditions</a>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="mailto:info@majify.tech">Contact</a>
+      </div>
+    </div>
+  </footer>
 
   <script>
-    const userLang = (navigator.language || navigator.userLanguage || "").toLowerCase();
-    const langCode = userLang.split('-')[0];
-    document.getElementById("langDisplay").textContent = langCode;
-
-    if (langCode === "fr") {
-      document.getElementById("fr").classList.add("visible");
-    } else {
-      document.getElementById("en").classList.add("visible");
-    }
+    document.getElementById("year").textContent = new Date().getFullYear();
 
     const steps = [
-      { type: "text", text: "— Majify your day — ", delay: 3000 },
-      { type: "text", text: "One idea at a time — ", delay: 1000 },
-      { type: "text", text: "It’s ", delay: 1000 },
-      { type: "link", text: "Wake Time", href: "https://discord.gg/dKxkvDK37e", delay:  700 },
-      { type: "text", text: " —", delay: 800 },
-    ];
+	  { type: "text", text: "Majify your day ", delay: 800 },
+
+	  { type: "text", text: "· One idea at a time ", delay: 550 },
+
+	  { type: "text", text: "· It’s ", delay: 450 },
+	  { type: "link", text: "Wake Time", href: "https://wake.tools", delay: 300 }
+	];
 
     const target = document.getElementById("typewriter");
+
     let stepIndex = 0;
 
     function runStep() {
-      if (stepIndex >= steps.length) return;
+      if (stepIndex >= steps.length) {
+        return;
+      }
+
       const step = steps[stepIndex++];
-      setTimeout(() => {
+
+      setTimeout(function() {
         if (step.type === "text") {
           let i = 0;
-          const interval = setInterval(() => {
+
+          const interval = setInterval(function() {
             if (i < step.text.length) {
-              target.append(document.createTextNode(step.text[i++]));
+              target.append(document.createTextNode(step.text[i]));
+              i++;
             } else {
               clearInterval(interval);
               runStep();
             }
-          }, 40);
+          }, 38);
+
         } else if (step.type === "link") {
           const link = document.createElement("a");
+
           link.href = step.href;
           link.target = "_blank";
+          link.rel = "noopener";
           link.textContent = step.text;
+
           target.appendChild(link);
-          runStep();
         }
       }, step.delay);
     }
 
     runStep();
   </script>
+
 </body>
 </html>
