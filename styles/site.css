@@ -46,6 +46,7 @@ html[data-theme="dark"] {
 body {
   font-family: "Barlow", sans-serif;
   position: relative;
+  isolation: isolate;
   min-height: 100vh;
   margin: 0;
   padding: 48px 22px 80px;
@@ -63,13 +64,16 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
   background:
     radial-gradient(circle at 32% 0%, rgba(111, 44, 255, 0.12), transparent 34%),
     var(--bg);
+  pointer-events: none;
 }
 
 body > * {
+  position: relative;
+  z-index: 1;
   width: min(100%, 860px);
   flex: 0 0 auto;
 }
@@ -288,7 +292,7 @@ html[data-theme="dark"] .theme-toggle-crescent {
 }
 
 .tagline {
-  margin-top: 32px;
+  margin-top: 20px;
   font-size: 1.35rem;
   font-weight: 600;
   max-width: 720px;
@@ -478,6 +482,7 @@ a:hover {
 
   .tagline {
     font-size: 1.18rem;
+    margin-top: 16px;
   }
 
   .footer-row {
