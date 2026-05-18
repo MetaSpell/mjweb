@@ -7,6 +7,8 @@ html {
   --soft: rgba(245, 247, 252, 0.9);
   --border: rgba(11, 20, 40, 0.09);
   --footer: #6d7891;
+  --brand-secondary: rgba(111, 44, 255, 0.72);
+  --brand-secondary-line: rgba(111, 44, 255, 0.38);
   --toggle-icon: rgba(85, 61, 157, 0.54);
   --toggle-glow: rgba(111, 44, 255, 0.025);
   --toggle-glow-strong: rgba(111, 44, 255, 0.08);
@@ -23,6 +25,8 @@ html[data-theme="dark"] {
   --soft: rgba(12, 18, 33, 0.9);
   --border: rgba(164, 178, 209, 0.14);
   --footer: #96a1b8;
+  --brand-secondary: rgba(165, 133, 255, 0.76);
+  --brand-secondary-line: rgba(165, 133, 255, 0.32);
   --toggle-icon: rgba(232, 236, 255, 0.72);
   --toggle-glow: rgba(143, 99, 255, 0.04);
   --toggle-glow-strong: rgba(143, 99, 255, 0.1);
@@ -92,9 +96,9 @@ body {
   gap: 18px;
   width: calc(100% - 8px);
   margin: 14px 0 0 8px;
-  color: var(--blue);
+  color: var(--brand-secondary);
   font-size: 0.74rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.48em;
   text-transform: uppercase;
 }
@@ -105,8 +109,8 @@ body {
   flex: 1 1 auto;
   height: 2px;
   border-radius: 999px;
-  background: currentColor;
-  opacity: 0.74;
+  background: var(--brand-secondary-line);
+  opacity: 1;
 }
 
 .theme-toggle {
