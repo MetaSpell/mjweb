@@ -26,7 +26,7 @@
 
       const label = button.querySelector("[data-theme-label]");
       if (label) {
-        label.textContent = isDark ? "Light mode" : "Dark mode";
+        label.textContent = isDark ? "Switch to light theme" : "Switch to dark theme";
       }
     });
 
@@ -78,7 +78,23 @@
           "</span>" +
         "</a>" +
         '<button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark theme">' +
-          '<span data-theme-label>Dark mode</span>' +
+          '<span class="sr-only" data-theme-label>Switch to dark theme</span>' +
+          '<span class="theme-toggle-icon" aria-hidden="true">' +
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round">' +
+              '<circle class="theme-toggle-outline" cx="12" cy="12" r="4.1"></circle>' +
+              '<g class="theme-toggle-rays">' +
+                '<path d="M12 3.3v2.3"></path>' +
+                '<path d="M12 18.4v2.3"></path>' +
+                '<path d="M5.4 5.4l1.7 1.7"></path>' +
+                '<path d="M16.9 16.9l1.7 1.7"></path>' +
+                '<path d="M3.3 12h2.3"></path>' +
+                '<path d="M18.4 12h2.3"></path>' +
+                '<path d="M5.4 18.6l1.7-1.7"></path>' +
+                '<path d="M16.9 7.1l1.7-1.7"></path>' +
+              "</g>" +
+              '<path class="theme-toggle-crescent" d="M15.7 4.8A7.7 7.7 0 1 0 19 18.4A6.5 6.5 0 1 1 15.7 4.8"></path>' +
+            "</svg>" +
+          "</span>" +
         "</button>" +
       "</div>" +
       pageLabel
