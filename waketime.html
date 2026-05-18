@@ -1,0 +1,100 @@
+<!-- Typewriter -->
+<p class="typewriter" id="typewriter"></p>
+
+<style>
+.typewriter {
+  color: #555;
+  font-size: 1.02rem;
+  margin-top: 46px;
+  margin-bottom: 22px;
+  text-align: right;
+  opacity: 0.95;
+  white-space: pre-wrap;
+  user-select: none;
+  letter-spacing: 0.25px;
+  font-style: italic;
+}
+
+.typewriter a {
+  color: #1166E0;
+  font-weight: 600;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: opacity 0.18s ease;
+}
+
+.typewriter a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .typewriter {
+    text-align: left;
+    font-size: 0.96rem;
+  }
+}
+</style>
+
+<script>
+const steps = [
+  { type: "text", text: "Majify your day. ", delay: 800 },
+  { type: "text", text: "One idea at a time. ", delay: 650 },
+  { type: "text", text: "It’s ", delay: 500 },
+  { type: "link", text: "Wake Time", href: "https://wake.tools", delay: 350 }
+];
+
+const target = document.getElementById("typewriter");
+
+let stepIndex = 0;
+
+function runStep() {
+
+  if (stepIndex >= steps.length) {
+    return;
+  }
+
+  const step = steps[stepIndex++];
+
+  setTimeout(function() {
+
+    if (step.type === "text") {
+
+      let i = 0;
+
+      const interval = setInterval(function() {
+
+        if (i < step.text.length) {
+
+          target.append(
+            document.createTextNode(step.text[i])
+          );
+
+          i++;
+
+        } else {
+
+          clearInterval(interval);
+          runStep();
+
+        }
+
+      }, 38);
+
+    } else if (step.type === "link") {
+
+      const link = document.createElement("a");
+
+      link.href = step.href;
+      link.target = "_blank";
+      link.rel = "noopener";
+      link.textContent = step.text;
+
+      target.appendChild(link);
+    }
+
+  }, step.delay);
+}
+
+runStep();
+</script>
