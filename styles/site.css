@@ -74,6 +74,8 @@ body {
 .site-brand-lockup {
   display: block;
   width: min(100%, 360px);
+  transform-origin: center 99%;
+  transition: transform 0.22s ease;
 }
 
 .site-brand-mark {
@@ -101,6 +103,7 @@ body {
   font-weight: 600;
   letter-spacing: 0.48em;
   text-transform: uppercase;
+  transition: color 0.2s ease;
 }
 
 .site-brand-caption::before,
@@ -111,6 +114,21 @@ body {
   border-radius: 999px;
   background: var(--brand-secondary-line);
   opacity: 1;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.site-brand-link:hover .site-brand-lockup {
+  transform: scale(1.015);
+}
+
+.site-brand-link:hover .site-brand-caption {
+  color: var(--blue);
+}
+
+.site-brand-link:hover .site-brand-caption::before,
+.site-brand-link:hover .site-brand-caption::after {
+  background: currentColor;
+  opacity: 0.72;
 }
 
 .theme-toggle {
