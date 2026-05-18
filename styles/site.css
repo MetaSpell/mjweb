@@ -2,6 +2,8 @@ html {
   --bg: #fcfdff;
   --blue: #6f2cff;
   --blue-strong: #5c20ee;
+  --heading: #4f6fff;
+  --subheading: #4f6194;
   --text: #081124;
   --muted: #5b6781;
   --soft: rgba(245, 247, 252, 0.9);
@@ -20,6 +22,8 @@ html[data-theme="dark"] {
   --bg: #050814;
   --blue: #8f63ff;
   --blue-strong: #a585ff;
+  --heading: #7692ff;
+  --subheading: #97a8da;
   --text: #f5f7ff;
   --muted: #aab4ca;
   --soft: rgba(12, 18, 33, 0.9);
@@ -59,7 +63,7 @@ body::before {
   inset: 0;
   z-index: -1;
   background:
-    radial-gradient(circle at top, rgba(111, 44, 255, 0.12), transparent 34%),
+    radial-gradient(circle at 32% 0%, rgba(111, 44, 255, 0.12), transparent 34%),
     var(--bg);
 }
 
@@ -289,7 +293,7 @@ html[data-theme="dark"] .theme-toggle-crescent {
 }
 
 .subtagline {
-  color: var(--muted);
+  color: var(--subheading);
   max-width: 720px;
   font-size: 1.05rem;
 }
@@ -299,7 +303,7 @@ section {
 }
 
 h2 {
-  color: var(--blue);
+  color: var(--heading);
   font-size: 1.25rem;
   margin: 30px 0 12px 0;
 }
