@@ -7,9 +7,9 @@ html {
   --soft: rgba(245, 247, 252, 0.9);
   --border: rgba(11, 20, 40, 0.09);
   --footer: #6d7891;
-  --toggle-icon: rgba(85, 61, 157, 0.82);
-  --toggle-glow: rgba(111, 44, 255, 0.14);
-  --toggle-glow-strong: rgba(111, 44, 255, 0.22);
+  --toggle-icon: rgba(85, 61, 157, 0.54);
+  --toggle-glow: rgba(111, 44, 255, 0.025);
+  --toggle-glow-strong: rgba(111, 44, 255, 0.08);
   --shadow: 0 20px 44px rgba(28, 41, 73, 0.08);
   background: var(--bg);
 }
@@ -23,9 +23,9 @@ html[data-theme="dark"] {
   --soft: rgba(12, 18, 33, 0.9);
   --border: rgba(164, 178, 209, 0.14);
   --footer: #96a1b8;
-  --toggle-icon: rgba(232, 236, 255, 0.88);
-  --toggle-glow: rgba(143, 99, 255, 0.18);
-  --toggle-glow-strong: rgba(143, 99, 255, 0.3);
+  --toggle-icon: rgba(232, 236, 255, 0.72);
+  --toggle-glow: rgba(143, 99, 255, 0.04);
+  --toggle-glow-strong: rgba(143, 99, 255, 0.1);
   --shadow: 0 24px 50px rgba(0, 0, 0, 0.28);
 }
 
@@ -133,8 +133,8 @@ body {
   border-radius: 50%;
   background:
     radial-gradient(circle, var(--toggle-glow) 0%, rgba(111, 44, 255, 0.06) 38%, rgba(111, 44, 255, 0) 74%);
-  opacity: 0.88;
-  filter: blur(6px);
+  opacity: 0.16;
+  filter: blur(9px);
   transition:
     transform 0.22s ease,
     opacity 0.22s ease,
@@ -147,9 +147,9 @@ body {
 }
 
 .theme-toggle:hover::before {
-  opacity: 1;
-  filter: blur(8px);
-  transform: scale(1.12);
+  opacity: 0.28;
+  filter: blur(10px);
+  transform: scale(1.03);
 }
 
 .theme-toggle:active {
@@ -168,7 +168,7 @@ body {
     color 0.24s ease,
     transform 0.28s ease,
     opacity 0.24s ease;
-  filter: drop-shadow(0 0 10px rgba(111, 44, 255, 0.08));
+  filter: none;
 }
 
 .theme-toggle-icon svg {
