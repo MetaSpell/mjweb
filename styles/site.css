@@ -39,15 +39,33 @@ html[data-theme="dark"] {
 
 body {
   font-family: "Barlow", sans-serif;
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 48px 22px;
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  padding: 48px 22px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: var(--text);
   line-height: 1.6;
+  background: transparent;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
   background:
     radial-gradient(circle at top, rgba(111, 44, 255, 0.12), transparent 34%),
     var(--bg);
-  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+body > * {
+  width: min(100%, 860px);
+  flex: 0 0 auto;
 }
 
 [data-site-header] {
