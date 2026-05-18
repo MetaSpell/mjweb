@@ -292,7 +292,8 @@ html[data-theme="dark"] .theme-toggle-crescent {
 }
 
 .tagline {
-  margin-top: 20px;
+  margin-top: 26px;
+  margin-bottom: 20px;
   font-size: 1.35rem;
   font-weight: 600;
   max-width: 720px;
@@ -302,6 +303,7 @@ html[data-theme="dark"] .theme-toggle-crescent {
   color: var(--subheading);
   max-width: 720px;
   font-size: 1.05rem;
+  margin-bottom: 35px;
 }
 
 section {
@@ -483,6 +485,11 @@ a:hover {
   .tagline {
     font-size: 1.18rem;
     margin-top: 16px;
+    margin-bottom: 20px;
+  }
+
+  .subtagline {
+    margin-bottom: 24px;
   }
 
   .footer-row {
