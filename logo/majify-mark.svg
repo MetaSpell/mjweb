@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="480 211 576 361" fill="none">
+  <defs>
+    <linearGradient id="majify-mark-gradient" x1="480" y1="211" x2="1056" y2="572" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7e39ff"/>
+      <stop offset="0.55" stop-color="#6f2cff"/>
+      <stop offset="1" stop-color="#5f1fff"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#majify-mark-gradient)" fill-rule="evenodd" d="M482 211l9 2 123 82 155 110 236-165 42-28 9 1-53 244-134 95 117-111 38-188-238 167 63 66v6l-74 78-9 2-78-80 1-7 65-66-242-166 39 188 119 111-135-94-55-238 2-8Zm288 223-54 53 52 57 55-53-52-57Z" clip-rule="evenodd"/>
+</svg>
