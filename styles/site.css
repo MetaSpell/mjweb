@@ -2,8 +2,9 @@ html {
   --bg: #fcfdff;
   --blue: #6f2cff;
   --blue-strong: #5c20ee;
-  --heading: #4f6fff;
-  --subheading: #4f6194;
+  --heading: #6250ff;
+  --subheading: #5967a2;
+  --link: #6642ff;
   --text: #081124;
   --muted: #5b6781;
   --soft: rgba(245, 247, 252, 0.9);
@@ -22,8 +23,9 @@ html[data-theme="dark"] {
   --bg: #050814;
   --blue: #8f63ff;
   --blue-strong: #a585ff;
-  --heading: #7692ff;
-  --subheading: #97a8da;
+  --heading: #8d86ff;
+  --subheading: #9aa8dc;
+  --link: #9173ff;
   --text: #f5f7ff;
   --muted: #aab4ca;
   --soft: rgba(12, 18, 33, 0.9);
@@ -330,7 +332,7 @@ li {
 }
 
 a {
-  color: var(--blue);
+  color: var(--link);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.18s ease;
