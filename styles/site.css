@@ -146,6 +146,10 @@ body {
   transform: translateY(-1px) scale(1.03);
 }
 
+.theme-toggle:hover .theme-toggle-icon {
+  transform: scale(1.12);
+}
+
 .theme-toggle:hover::before {
   opacity: 0.28;
   filter: blur(10px);
